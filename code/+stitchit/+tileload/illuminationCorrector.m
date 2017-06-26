@@ -42,11 +42,11 @@ function im = illuminationCorrector(im,coords,userConfig,index,verbose)
     end
 
     % if finds mat files - cidre stitch, otherwise average
-    cidre_correction = check_cidreModel(userConfig);
+    [cidre_correction,model] = check_cidreModel(coords,userConfig);
     if cidre_correction
-        im = correct_cidre(im);
+        im = correct_cidre(im,model);
     else
-        im = correct_average(coords,userConfig,im);
+        im = correct_average(coords,userConfig,im,verbose);
     end
 
 
@@ -56,7 +56,7 @@ function im = illuminationCorrector(im,coords,userConfig,index,verbose)
 %Calculate average filename from tile coordinates. We could simply load the
 %image for one layer and one channel, or we could try odd stuff like averaging
 %layers or channels. This may make things worse or it may make things better. 
-function im = correct_average(coords,userConfig,im)
+function im = correct_average(coords,userConfig,im,verbose)
 
     layer=coords(2); %optical section
     chan=coords(5);
