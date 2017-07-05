@@ -128,7 +128,7 @@ function [alternative_correction,model] = check_cidreModel(coords,userConfig)
     modelC_def.z_small   = [];
     
     % find mat files
-    fname_basic = [avDir sprintf('/basic_chanel_%i.mat',chan)];
+    fname_basic = [avDir sprintf('/basic_channel_%i.mat',chan)];
     % how BaSiC model structure should look like
     modelB_def.method    = 'basic';
     modelB_def.v         = [];
@@ -165,4 +165,5 @@ function [alternative_correction,model] = check_cidreModel(coords,userConfig)
     else
         % will do average tile correction
         alternative_correction = 0;
+        model = 0;
     end
