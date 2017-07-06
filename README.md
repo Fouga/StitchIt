@@ -1,4 +1,4 @@
-<img src="https://github.com/BaselLaserMouse/StitchIt/blob/gh-pages/images/rgb_brain_example.jpg" />
+<img src="https://github.com/Fouga/StitchIt/tree/gh-pages/images/drawing.eps" />
 
 
 # StitchIt with CIDRE or BaSiC
