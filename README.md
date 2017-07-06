@@ -1,4 +1,4 @@
-<img src="https://github.com/Fouga/StitchIt/tree/gh-pages/images/background.png" />
+<img src="https://github.com/Fouga/StitchIt/tree/gh-pages/images/background.jpg" />
 
 
 # StitchIt with CIDRE or BaSiC
