@@ -39,6 +39,7 @@ function im = combCorrector(im,sectionDir,coords,userConfig)
     function [TxTflag, Image_shift,stripe_size]  = check_rowsShiftTxt(coords,userConfig)
         filename_shift = fullfile(userConfig.subdir.rawDataDir, userConfig.subdir.averageDir, '/Shifts_per_tile.txt');
         if exist(filename_shift)
+            disp('Correcting combo artifact with L1-norm')
             TxTflag = 1;
             fid = fopen(filename_shift, 'r');
             C = textscan(fid, '%s', [9 Inf]);
