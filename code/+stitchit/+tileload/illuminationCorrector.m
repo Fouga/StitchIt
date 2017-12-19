@@ -44,7 +44,7 @@ function im = illuminationCorrector(im,coords,userConfig,index,verbose)
     % if finds mat files - cidre stitch, otherwise average
     [alternative_correction,model] = check_cidreModel(coords,userConfig);
     if alternative_correction
-        im = correct_not_average(im,model);
+        im = correct_not_average(im,model,'flatfield');
     else
         im = correct_average(coords,userConfig,im,verbose);
     end
